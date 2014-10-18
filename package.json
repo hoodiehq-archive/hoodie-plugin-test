@@ -1,0 +1,6 @@
+{
+  "name": "hoodie-plugin-test",
+  "description": "Hoodie plugin to play with tasks",
+  "dependencies": {},
+  "version": "1.0.0"
+}
