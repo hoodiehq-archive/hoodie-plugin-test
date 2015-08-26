@@ -1,6 +1,12 @@
 {
   "name": "hoodie-plugin-test",
+  "version": "1.0.0",
   "description": "Hoodie plugin to play with tasks",
   "dependencies": {},
-  "version": "1.0.0"
+  "devDependencies": {
+    "standard": "^5.1.0"
+  },
+  "scripts": {
+    "test": "standard"
+  }
 }
