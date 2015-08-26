@@ -47,9 +47,9 @@ module.exports = {
     return value: undefined (no return value is expected)
   */
 
-  'server.pack.pre': function (/* pack */) {
-    console.log('hook: server.pack.pre called')
-  },
+  // 'server.pack.pre': function (server) {
+  //   console.log('hook: server.pack.pre called')
+  // },
 
   /*
     name: server.pack.post
@@ -67,7 +67,13 @@ module.exports = {
     return value: undefined (no return value is expected)
   */
 
-  'server.pack.post': function (/* pack */) {
-    console.log('hook: server.pack.post called')
+  'server.pack.post': function (server) {
+    server.route({
+      method: 'GET',
+      path: '/test/route',
+      handler: function (request, reply) {
+        reply({ok: true})
+      }
+    })
   }
 }
