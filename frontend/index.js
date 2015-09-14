@@ -1,4 +1,4 @@
 /* global Hoodie*/
-Hoodie.extend(function (hoodie) {
+module.exports = function (hoodie) {
   hoodie.test = hoodie.task('test').start
-})
+}
