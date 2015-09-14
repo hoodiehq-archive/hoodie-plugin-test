@@ -1,6 +1,6 @@
 var boom = require('boom')
 
-module.exports = function (hoodieEvents) {
+module.exports = function (hoodieEvents, next) {
   hoodieEvents.on('server.api.plugin-request', function (request, reply) {
     if (request.method === 'options') return reply(boom.methodNotAllowed())
     reply({
@@ -9,4 +9,5 @@ module.exports = function (hoodieEvents) {
       payload: request.payload
     })
   })
+  next()
 }
