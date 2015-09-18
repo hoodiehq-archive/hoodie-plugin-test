@@ -6,5 +6,6 @@ module.exports = function (server, options, next) {
       reply({ok: true})
     }
   })
+
   next()
 }
